@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link-To-QR - Corporate Config</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1e293b;
+            --primary-color: #2563eb;
+            --secondary-color: #f1f5f9;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #64748b;
+        }
+
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0 10%;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+        }
+
+        .hero-image {
+            background: var(--secondary-color);
+            height: 500px;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .phone-mockup {
+            width: 250px;
+            height: 480px;
+            background: white;
+            border-radius: 2rem;
+            border: 8px solid #cbd5e1;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            background: #1e293b;
+        }
+
+        .features {
+            padding: 1rem 0;
+            display: flex;
+            gap: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .check {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div style="width: 24px; height: 24px; background: currentColor; border-radius: 4px;"></div>
+            Link-To-QR
+        </div>
+        <div class="nav-links">
+            <span>Solutions</span>
+            <span>Pricing</span>
+            <span>Enterprise</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-text">
+            <h1>Enterprise Grade <br>QR Solutions</h1>
+            <p>Create, manage, and track QR codes for your business. Reliable, secure, and fully customizable to match
+                your brand identity.</p>
+
+            <div class="input-group">
+                <input type="text" placeholder="Enter utility URL..." value="https://company.com" readonly>
+                <button>Create QR</button>
+            </div>
+
+            <div class="features">
+                <div class="feature"><span class="check">✓</span> Vector Formats</div>
+                <div class="feature"><span class="check">✓</span> Analytics</div>
+                <div class="feature"><span class="check">✓</span> API Access</div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="phone-mockup">
+                <div class="qr-code"></div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
